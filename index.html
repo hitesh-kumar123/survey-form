@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+     <h1 id="title">survey-form</h1>
+     <p id="description">Please fill out this survey to help us understand your preferences better</p>
+  </header>
+ 
+ <main>
+        <form id="survey-form">
+            <!-- Name Field -->
+            <label id="name-label" for="name">Name:</label>
+            <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                placeholder="Enter your full name" 
+                required>
+            
+            <!-- Email Field -->
+            <label id="email-label" for="email">Email:</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="Enter your email address" 
+                required>
+            
+            <!-- Number Field -->
+            <label id="number-label" for="number">Age:</label>
+            <input 
+                type="number" 
+                id="number" 
+                name="age" 
+                placeholder="Enter your age" 
+                min="10" 
+                max="99" 
+                required>
+            
+            <!-- Dropdown -->
+            <label for="dropdown">What is your favorite genre of movies?</label>
+            <select id="dropdown" name="genre" required>
+                <option value="" disabled selected>Select a genre</option>
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <option value="horror">Horror</option>
+            </select>
+            
+            <!-- Radio Buttons -->
+            <p>How often do you watch movies?</p>
+            <input type="radio" id="daily" name="frequency" value="daily">
+            <label for="daily">Daily</label><br>
+            <input type="radio" id="weekly" name="frequency" value="weekly">
+            <label for="weekly">Weekly</label><br>
+            <input type="radio" id="monthly" name="frequency" value="monthly">
+            <label for="monthly">Monthly</label>
+            
+            <!-- Checkboxes -->
+            <p>What platforms do you use to watch movies? (Select all that apply)</p>
+            <input type="checkbox" id="netflix" name="platform" value="netflix">
+            <label for="netflix">Netflix</label><br>
+            <input type="checkbox" id="prime" name="platform" value="prime">
+            <label for="prime">Amazon Prime</label><br>
+            <input type="checkbox" id="theater" name="platform" value="theater">
+            <label for="theater">Theater</label>
+            
+            <!-- Textarea -->
+            <label for="comments">Additional Comments:</label>
+            <textarea 
+            id="comments" 
+            name="comments" 
+            rows="4" 
+            placeholder="Enter any additional comments here...">
+            </textarea>
+            
+            <!-- Submit Button -->
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
